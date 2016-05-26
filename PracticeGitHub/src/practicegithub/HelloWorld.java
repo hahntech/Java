@@ -30,6 +30,7 @@ public class HelloWorld extends javax.swing.JFrame {
     private void initComponents() {
 
         jButtonClickMe = new javax.swing.JButton();
+        jButtonTwo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -40,13 +41,22 @@ public class HelloWorld extends javax.swing.JFrame {
             }
         });
 
+        jButtonTwo.setText("Button 2");
+        jButtonTwo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonTwoActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(161, 161, 161)
-                .addComponent(jButtonClickMe)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButtonTwo)
+                    .addComponent(jButtonClickMe))
                 .addContainerGap(164, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -54,7 +64,9 @@ public class HelloWorld extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(112, 112, 112)
                 .addComponent(jButtonClickMe)
-                .addContainerGap(165, Short.MAX_VALUE))
+                .addGap(45, 45, 45)
+                .addComponent(jButtonTwo)
+                .addContainerGap(97, Short.MAX_VALUE))
         );
 
         pack();
@@ -68,6 +80,14 @@ public class HelloWorld extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, messageDialog, messageTitle, JOptionPane.INFORMATION_MESSAGE);
 
     }//GEN-LAST:event_jButtonClickMeActionPerformed
+
+    private void jButtonTwoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTwoActionPerformed
+        // TODO add your handling code here:
+        String messageDialog = "You found the second button! Thanks for clicking!";
+        String messageTitle = "Second Button";
+        JOptionPane.showMessageDialog(null, messageDialog, messageTitle, JOptionPane.INFORMATION_MESSAGE);
+
+    }//GEN-LAST:event_jButtonTwoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -106,5 +126,6 @@ public class HelloWorld extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonClickMe;
+    private javax.swing.JButton jButtonTwo;
     // End of variables declaration//GEN-END:variables
 }
