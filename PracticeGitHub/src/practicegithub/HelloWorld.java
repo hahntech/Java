@@ -62,7 +62,8 @@ public class HelloWorld extends javax.swing.JFrame {
 
     private void jButtonClickMeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClickMeActionPerformed
         // TODO add your handling code here:
-        String messageDialog = "Hellow World! Thanks for clicking!";
+        String messageDialog = "Hellow World!\n"
+                + "Thanks for clicking!";
         String messageTitle = "HELLO WORLD";
         JOptionPane.showMessageDialog(null, messageDialog, messageTitle, JOptionPane.INFORMATION_MESSAGE);
 
